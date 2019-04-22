@@ -112,9 +112,6 @@ class PpobController extends Controller
             $filetype = $request->input('filetype');
 
             //Create ESC/POS commands for sample receipt
-            $esc = '0x1B'; //ESC byte in hex notation
-            $newLine = '0x0A'; //LF byte in hex notation
-
             $cmds = $this->text($filetype);
 
             //Create a ClientPrintJob obj that will be processed at the client side by the WCPP
