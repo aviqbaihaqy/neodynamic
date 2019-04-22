@@ -38,6 +38,7 @@ class PpobController extends Controller
         $struk['billPeriod'] = 'April';
         $struk['billAmount'] = '200000';
         $struk['subscriberId'] = 'X20';
+        $struk['swreff'] = 'XXX90';
         $struk['subscriberName'] = 'Aviq Baihaqy';
         $struk['subscriberAddress'] = 'Tegal';
         $struk['subscriberSegmentation'] = 'A';
@@ -49,7 +50,16 @@ class PpobController extends Controller
             'cubMtr' => '200',
             'NonWaterAmount' => '100',
             'penaltyAmount' => '5000',
+            'standmeter' => 'meter',
+            'msn' => 'msn',
+            'Materai' => '6000',
+            'PPN' => '10000',
+            'PPJ' => '1000',
+            'Angsuran' => '20000',
+            'RpStromToken' => '20000',
+            'JmlKwh' => '2000'
         ];
+
 
         switch ($type) {
             default:
@@ -60,6 +70,14 @@ class PpobController extends Controller
                 $qz_print = $this->pdamSys($struk, 1);
                 break;
             case 'TELKOM':
+
+                $struk['dataReceipt'][0]['periode'] = 'Januari';
+                $struk['dataReceipt'][0]['jmltag'] = '20000';
+                $struk['dataReceipt'][1]['periode'] = 'Februari';
+                $struk['dataReceipt'][1]['jmltag'] = '20000';
+                $struk['dataReceipt'][2]['periode'] = 'Maret';
+                $struk['dataReceipt'][2]['jmltag'] = '20000';
+
                 $qz_print = $this->telkom($struk, 1);
                 break;
             case 'PLNPREPAID':
@@ -109,7 +127,6 @@ class PpobController extends Controller
             //Send ClientPrintJob back to the client
             return response($cpj->sendToClient())
                 ->header('Content-Type', 'application/octet-stream');
-
 
         }
     }
