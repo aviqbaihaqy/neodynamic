@@ -83,7 +83,6 @@ class PpobController extends Controller
                 $struk['dataReceipt']['Angsuran'] = '20000';
                 $struk['dataReceipt']['RpStromToken'] = '20000';
                 $struk['dataReceipt']['JmlKwh'] = '2000';
-                $struk['billPeriod'] = '04/2019 9999';
 
 
                 $qz_print = $this->plnPrepaid($struk, 1);
