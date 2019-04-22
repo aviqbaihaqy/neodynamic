@@ -38,7 +38,6 @@ class PpobController extends Controller
         $struk['billPeriod'] = 'April';
         $struk['billAmount'] = '200000';
         $struk['subscriberId'] = 'X20';
-        $struk['swreff'] = 'XXX90';
         $struk['subscriberName'] = 'Aviq Baihaqy';
         $struk['subscriberAddress'] = 'Tegal';
         $struk['subscriberSegmentation'] = 'A';
@@ -71,6 +70,7 @@ class PpobController extends Controller
                 break;
             case 'TELKOM':
 
+                $struk['swreff'] = 'XXX90909';
                 $struk['dataReceipt'][0]['periode'] = 'Januari';
                 $struk['dataReceipt'][0]['jmltag'] = '20000';
                 $struk['dataReceipt'][1]['periode'] = 'Februari';
