@@ -78,6 +78,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{{action('HomeController@index')}}">Home</a></li>
+                    <li><a href="{{action('PpobController@index')}}">PPOB</a></li>
                     <li><a href="{{action('PrintESCPOSController@index')}}">Print ESCPOS</a></li>
                     <li><a href="{{action('HomeController@samples')}}">Samples</a></li>
                     <li><a href="{{action('HomeController@printersinfo')}}">Printers</a></li>

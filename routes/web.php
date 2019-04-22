@@ -25,6 +25,8 @@ Route::get('DemoPrintCommands', 'DemoPrintCommandsController@index');
 Route::get('DemoPrintCommandsController', 'DemoPrintCommandsController@printCommands');
 Route::any('WebClientPrintController', 'WebClientPrintController@processRequest');
 
-//Route::get('home/printESCPOS', 'HomeController@printESCPOS');
 Route::get('home/printESCPOS', 'PrintESCPOSController@index');
 Route::get('PrintESCPOSController', 'PrintESCPOSController@printCommands');
+
+Route::get('ppob', 'PpobController@index');
+Route::get('PpobController', 'PpobController@printCommands');
