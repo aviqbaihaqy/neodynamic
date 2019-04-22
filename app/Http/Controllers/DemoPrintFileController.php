@@ -80,7 +80,7 @@ class DemoPrintFileController extends Controller
                     //$myfile->printInReverseOrder = true;
                     $cpj->printFile = $myfile;
                 }
-                else if ($filetype === 'TXT')
+                else if ($filetype === 'TXT' OR $filetype === 'TXTCUSTOM')
                 {
                     $myfile = new PrintFileTXT($filePath, $fileName, null);
                     $myfile->printOrientation = PrintOrientation::Portrait;
