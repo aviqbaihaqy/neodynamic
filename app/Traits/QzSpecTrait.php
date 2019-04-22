@@ -43,37 +43,37 @@ trait QzSpecTrait {
 	public function getUnicodeChar($name=null){
 		switch ($name) {
 			case 'f15':
-				return Chr(0x1B) . Chr(0x21) . chr(0x67);
+				return chr(0x1B) . chr(0x21) . chr(0x67);
 			break;
 			case 'f10':
-				return Chr(0x1B) . Chr(0x21) . chr(0x50);
+				return chr(0x1B) . chr(0x21) . chr(0x50);
 			break;
 			case 'boldTag':
-				return Chr(27) . Chr(69);
+				return chr(27) . chr(69);
 			break;
 			case 'condensed':
-				return Chr(27) . Chr(33) . Chr(4);
+				return chr(27) . chr(33) . chr(4);
 			break;
 			case 'fontsize':
-				return Chr(27) . Chr(80);
+				return chr(27) . chr(80);
 			break;
 			case 'boldOpen':
-				return Chr(27) . Chr(69);
+				return chr(27) . chr(69);
 			break;
 			case 'boldClose':
-				return Chr(27) . Chr(70);
+				return chr(27) . chr(70);
 			break;
 			case 'italicOpen':
-				return Chr(27) . Chr(52);
+				return chr(27) . chr(52);
 			break;
 			case 'italicClose':
-				return Chr(27) . Chr(53);
+				return chr(27) . chr(53);
 			break;
 			case 'underlineOpen':
-				return Chr(27) . Chr(45) . Chr(49);
+				return chr(27) . chr(45) . chr(49);
 			break;
 			case 'underlineClose':
-				return Chr(27) . Chr(45) . Chr(48);
+				return chr(27) . chr(45) . chr(48);
 			break;
 			case 'initialized':
 				return chr(27).chr(64);
