@@ -1,0 +1,14 @@
+@P                STRUK PENERIMA                             ESTRUK PEMBAYARAN  - XXXXF                                       MODE
+30-12-2018 04:48:44                          NO. STRUK: xxxx/xx/xx/xxxx                          30-12-1999 04:48:44
+
+NO METER: 86016956335                        NO METER     : 11116956111                                  METERAI         : Rp. 3,000   
+IDPEL   : 543601838570                       IDPEL        : 113601811111                                 PPN             : Rp. 0       
+NAMA    : BASUDEWO ST                        NAMA         : BASUDEWO ST                                  PPJ             : Rp. 28,133  
+DAYA    : R1/2200VA                          TARIF DAYA   : R1/2200VA                                    ANGSURAN        : Rp. 0       
+                                             REF          : 047421CA4D3E87218BED7B36D1F45A9A             RP STROOM/TOKEN : Rp. 468,867 
+ADMIN   : Rp. 3,000                          RP BAYAR     : Rp. 503,000                                  JML KWH         : 319.6       
+TOTAL   : Rp. 503,000                                                                                    ADMIN BANK      : Rp. 3,000   
+                                             !PSTROOM/TOKEN: 1111  1111 1111 1111  1111                                            
+                                                 Informasi Hubungi Call Center 123 Atau hubungi PLN Terdekat . Powered by Bukopinet.    
+
+
