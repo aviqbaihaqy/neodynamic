@@ -32,7 +32,7 @@ class PpobController extends Controller
         $struk = [];
 
         //default untuk general
-        $struk['footer'] = 'MATUR NUWUN';
+        $struk['footer'] = 'MATUR NUWUN <br> PPOB SYSTEM';
         $struk['date'] = '22 April 2019';
         $struk['numreceipt'] = '001';
         $struk['billPeriod'] = '04/2019';
