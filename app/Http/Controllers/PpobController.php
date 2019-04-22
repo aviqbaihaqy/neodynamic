@@ -35,7 +35,7 @@ class PpobController extends Controller
         $struk['footer'] = 'MATUR NUWUN';
         $struk['date'] = '22 April 2019';
         $struk['numreceipt'] = '001';
-        $struk['billPeriod'] = 'April';
+        $struk['billPeriod'] = '04/2019';
         $struk['billAmount'] = '200000';
         $struk['subscriberId'] = 'X20';
         $struk['swreff'] = 'XXX90909';
@@ -83,6 +83,8 @@ class PpobController extends Controller
                 $struk['dataReceipt']['Angsuran'] = '20000';
                 $struk['dataReceipt']['RpStromToken'] = '20000';
                 $struk['dataReceipt']['JmlKwh'] = '2000';
+                $struk['billPeriod'] = '04/2019 9999';
+
 
                 $qz_print = $this->plnPrepaid($struk, 1);
                 break;
