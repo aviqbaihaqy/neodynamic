@@ -26,5 +26,9 @@ class HomeController extends Controller
     public function samples(){
         return view('home.samples');
     }
+
+    public function printESCPOS(){
+        return view('home.printESCPOS');
+    }
     
 }

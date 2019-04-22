@@ -78,6 +78,7 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{{action('HomeController@index')}}">Home</a></li>
+                    <li><a href="{{action('PrintESCPOSController@index')}}">Print ESCPOS</a></li>
                     <li><a href="{{action('HomeController@samples')}}">Samples</a></li>
                     <li><a href="{{action('HomeController@printersinfo')}}">Printers</a></li>
                     <li><a href="{{action('DemoPrintFileController@index')}}">Print Files</a></li>
@@ -97,14 +98,8 @@
             </p>
         </div>
     </div>
-    <div class="container body-content">
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+    <div class="container body-content" style="margin-top: 180px">
+
         @yield('body')
 
         <footer>
