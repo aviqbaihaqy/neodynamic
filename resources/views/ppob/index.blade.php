@@ -36,6 +36,7 @@
                         <label for="ddlFileType">Select a sample Struk to print:</label>
                         <select id="ddlFileType" class="form-control">
                             <option>GENERAL</option>
+                            <option>PDAMMKM</option>
                             <option>PDAMSYS</option>
                             <option>TELKOM</option>
                             <option>PLNPREPAID</option>

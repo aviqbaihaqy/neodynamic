@@ -38,10 +38,11 @@ class PpobController extends Controller
         $struk['billPeriod'] = 'April';
         $struk['billAmount'] = '200000';
         $struk['subscriberId'] = 'X20';
+        $struk['swreff'] = 'XXX90909';
         $struk['subscriberName'] = 'Aviq Baihaqy';
         $struk['subscriberAddress'] = 'Tegal';
         $struk['subscriberSegmentation'] = 'A';
-        $struk['admin'] = '002';
+        $struk['admin'] = '3000';
         $struk['total'] = '210000';
         $struk['dataReceipt'] = [
             'pdam' => 'PDAM TEGAL',
@@ -49,14 +50,6 @@ class PpobController extends Controller
             'cubMtr' => '200',
             'NonWaterAmount' => '100',
             'penaltyAmount' => '5000',
-            'standmeter' => 'meter',
-            'msn' => 'msn',
-            'Materai' => '6000',
-            'PPN' => '10000',
-            'PPJ' => '1000',
-            'Angsuran' => '20000',
-            'RpStromToken' => '20000',
-            'JmlKwh' => '2000'
         ];
 
 
@@ -65,12 +58,14 @@ class PpobController extends Controller
             case 'GENERAL':
                 $qz_print = $this->general($struk, 1);
                 break;
+            case 'PDAMMKM':
+                $qz_print = $this->pdamMkm($struk, 1);
+                break;
             case 'PDAMSYS':
                 $qz_print = $this->pdamSys($struk, 1);
                 break;
             case 'TELKOM':
 
-                $struk['swreff'] = 'XXX90909';
                 $struk['dataReceipt'][0]['periode'] = 'Januari';
                 $struk['dataReceipt'][0]['jmltag'] = '20000';
                 $struk['dataReceipt'][1]['periode'] = 'Februari';
@@ -81,9 +76,19 @@ class PpobController extends Controller
                 $qz_print = $this->telkom($struk, 1);
                 break;
             case 'PLNPREPAID':
+                $struk['dataReceipt']['msn'] = 'msnXX9090';
+                $struk['dataReceipt']['Materai'] = '6000';
+                $struk['dataReceipt']['PPN'] = '10000';
+                $struk['dataReceipt']['PPJ'] = '1100';
+                $struk['dataReceipt']['Angsuran'] = '20000';
+                $struk['dataReceipt']['RpStromToken'] = '20000';
+                $struk['dataReceipt']['JmlKwh'] = '2000';
+
                 $qz_print = $this->plnPrepaid($struk, 1);
                 break;
             case 'PLNPOSTPAID':
+                $struk['dataReceipt']['standmeter'] = '220';
+
                 $qz_print = $this->plnPostpaid($struk, 1);
                 break;
             case 'PLNNONTAGLIS':
