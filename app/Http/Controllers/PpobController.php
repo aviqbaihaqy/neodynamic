@@ -59,6 +59,7 @@ class PpobController extends Controller
                 $qz_print = $this->general($struk, 1);
                 break;
             case 'PDAMMKM':
+                $struk['footer'] = 'MATUR NUWUN <br> PPOB SYSTEM <br> OKE JOS';
                 $qz_print = $this->pdamMkm($struk, 1);
                 break;
             case 'PDAMSYS':
@@ -88,6 +89,7 @@ class PpobController extends Controller
                 $qz_print = $this->plnPrepaid($struk, 1);
                 break;
             case 'PLNPOSTPAID':
+                $struk['footer'] = 'MATUR NUWUN <br> PPOB SYSTEM <br> OKE JOS';
                 $struk['dataReceipt']['standmeter'] = '220';
 
                 $qz_print = $this->plnPostpaid($struk, 1);
