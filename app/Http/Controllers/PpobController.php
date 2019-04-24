@@ -119,7 +119,7 @@ class PpobController extends Controller
             $cpj = new ClientPrintJob();
             //set ESCPOS commands to print...
             $cpj->printerCommands = $cmds['print'];
-            $cpj->formatHexValues = true;
+            // $cpj->formatHexValues = true;
 
             if ($useDefaultPrinter || $printerName === 'null') {
                 $cpj->clientPrinter = new DefaultPrinter();
