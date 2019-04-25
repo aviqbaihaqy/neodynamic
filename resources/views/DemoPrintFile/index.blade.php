@@ -94,7 +94,7 @@
                                     <hr />
                                     <div class="checkbox">
                                         <label>
-                                            <input type="checkbox" id="useDefaultPrinter" />
+                                            <input type="checkbox" name="useDefaultPrinter" id="useDefaultPrinter" value="checked"/>
                                             <strong>Print to Default printer</strong> or...
                                         </label>
                                     </div>
@@ -150,7 +150,7 @@
                                             <option>TXTCUSTOM</option>
                                         </select>
                                         <br />
-                                        <a class="btn btn-success btn-lg" onclick="javascript:jsWebClientPrint.print('useDefaultPrinter=' + $('#useDefaultPrinter').attr('checked') + '&printerName=' + encodeURIComponent($('#installedPrinterName').val()) + '&filetype=' + $('#ddlFileType').val());">Print File...</a>
+                                        <a class="btn btn-success btn-lg" onclick="javascript:jsWebClientPrint.print('useDefaultPrinter=' + $('input[name=\'useDefaultPrinter\']:checked').val() + '&printerName=' + encodeURIComponent($('#installedPrinterName').val()) + '&filetype=' + $('#ddlFileType').val());">Print File...</a>
                                     </div>
                                 </div>
                             </div>
