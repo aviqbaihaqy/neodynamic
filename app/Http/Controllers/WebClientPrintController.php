@@ -31,7 +31,7 @@ class WebClientPrintController extends Controller
         //===================
         //Set wcpcache folder RELATIVE to WebClientPrint.php file
         //FILE WRITE permission on this folder is required!!!
-        WebClientPrint::$wcpCacheFolder = storage_path('/WebClientPrint/wcpcache/');
+        WebClientPrint::$wcpCacheFolder = storage_path('WebClientPrint/wcpcache/');
         //===================
 
         // Clean built-in Cache
