@@ -9,7 +9,7 @@
                 <hr />
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox" id="useDefaultPrinter" />
+                        <input type="checkbox" name="useDefaultPrinter" id="useDefaultPrinter" value="checked"/>
                         <strong>Print to Default printer</strong> or...
                     </label>
                 </div>
@@ -31,7 +31,7 @@
                 <hr/>
 
                 <input class="btn btn-success" type="button" style="font-size:18px"
-                       onclick="javascript:jsWebClientPrint.print('useDefaultPrinter=' + $('#useDefaultPrinter').attr('checked') + '&printerName=' + $('#installedPrinterName').val());"
+                       onclick="javascript:jsWebClientPrint.print('useDefaultPrinter=' + $('input[name=\'useDefaultPrinter\']:checked').val() + '&printerName=' + $('#installedPrinterName').val());"
                        value="Print Label..."/>
             </div>
 

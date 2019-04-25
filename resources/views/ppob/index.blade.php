@@ -13,7 +13,7 @@
                     <hr/>
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" id="useDefaultPrinter" value="checked"/>
+                            <input type="checkbox" name="useDefaultPrinter" id="useDefaultPrinter" value="checked"/>
                             <strong>Print to Default printer</strong> or...
                         </label>
                     </div>
@@ -46,13 +46,13 @@
                         <br/>
                         <div class="checkbox">
                             <label>
-                                <input type="checkbox" id="useHex" value="checked"/>
+                                <input type="checkbox" name="useHex" id="useHex" value="checked"/>
                                 <strong>Enable HEX value</strong>
                             </label>
                         </div>
                         <hr>
                         <a class="btn btn-success btn-lg"
-                           onclick="javascript:jsWebClientPrint.print('useHex='+ $('#useHex').value('checked') +'&useDefaultPrinter=' + $('#useDefaultPrinter').attr('checked') + '&printerName=' + encodeURIComponent($('#installedPrinterName').val()) + '&filetype=' + $('#ddlFileType').val());">Print
+                           onclick="javascript:jsWebClientPrint.print('useHex='+ $('input[name=\'useHex\']:checked').val() +'&useDefaultPrinter=' + $('input[name=\'useDefaultPrinter\']:checked').val() + '&printerName=' + encodeURIComponent($('#installedPrinterName').val()) + '&filetype=' + $('#ddlFileType').val());">Print
                             Struk...</a>
                     </div>
                 </div>
@@ -92,7 +92,6 @@
             alert("No printers are installed in your system.");
         }
 
-        console.log();
     </script>
 
     {!!
