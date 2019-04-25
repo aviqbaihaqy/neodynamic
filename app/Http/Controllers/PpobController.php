@@ -114,6 +114,8 @@ class PpobController extends Controller
             $printerName = urldecode($request->input('printerName'));
             $filetype = $request->input('filetype');
 
+            // dd($request->all());
+
             //Create ESC/POS commands for sample receipt
             $cmds = $this->text($filetype);
 
@@ -121,7 +123,10 @@ class PpobController extends Controller
             $cpj = new ClientPrintJob();
             //set ESCPOS commands to print...
             $cpj->printerCommands = $cmds['print'];
-            // $cpj->formatHexValues = true;
+            
+            if($request->input('useHex') === 'checked'){
+                $cpj->formatHexValues = true;
+            }
 
             if ($useDefaultPrinter || $printerName === 'null') {
                 $cpj->clientPrinter = new DefaultPrinter();
